@@ -81,4 +81,5 @@ lis12 = replicate 5 1  -- do the same as above
 lis13 = [x*3 | x <- [1..10]]
 lis14 = [x*3 | x <- [1..10], even (x*3)]  -- only even number above list
 
+-- own length function
 length' xs = sum [1 | _ <- xs]
