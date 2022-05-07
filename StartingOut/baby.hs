@@ -74,5 +74,11 @@ mul11 = take 10 [11, 22..]  -- first 10 number multiple of 11
 lis11 = take 10 (cycle [1,2])  -- [1,2,1,2,1,2,1,2,1,2]
 
 -- repeat
-lis12 = take 5 (repeat 1)  -- [1,1,1,1,1]
-lis13 = replicate 5 1
+-- lis12 = take 5 (repeat 1)  -- [1,1,1,1,1]
+lis12 = replicate 5 1  -- do the same as above
+
+-- list comprehension
+lis13 = [x*3 | x <- [1..10]]
+lis14 = [x*3 | x <- [1..10], even (x*3)]  -- only even number above list
+
+length' xs = sum [1 | _ <- xs]
