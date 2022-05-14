@@ -78,6 +78,8 @@ lis11 = take 10 (cycle [1,2])  -- [1,2,1,2,1,2,1,2,1,2]
 lis12 = replicate 5 1  -- do the same as above
 
 -- list comprehension
+-- [x*2 | x <- [1,2,3...], x > 10]  -- uma lista com o dobro de todos 
+                                    -- os valores acima de 10 na lista
 lis13 = [x*3 | x <- [1..10]]
 lis14 = [x*3 | x <- [1..10], even (x*3)]  -- only even number above list
 
