@@ -1,4 +1,5 @@
 collatz' :: (Integral a) => a -> a -> a -> a
+collatz' 1 _ _ = 1
 collatz' n e i
     | e == i = n
     | even n = collatz' (n `div` 2) e (i + 1)
