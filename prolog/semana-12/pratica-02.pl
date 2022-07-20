@@ -4,20 +4,20 @@ Na saida deve ser retornado a soma de todos valores menores que N.
 */
 
 
-somatorio(N, X, S, S2):-
+somatorio(N, X, Sum, SumOut):-
     (
-        X < N -> S2 is X + S;
-        S2 is S
+        X < N -> SumOut is X + Sum;
+        SumOut is Sum
     ).
 
 
-entrada(N, S, Out):-
+entrada(N, Sum, Out):-
     read(X),
     (
         dif(X, 'fim') ->
-        somatorio(N, X, S, S2),
-        entrada(N, S2, Out);
-        Out is S
+        somatorio(N, X, Sum, SumOut),
+        entrada(N, SumOut, Out);
+        Out is Sum
     ).
     
 
